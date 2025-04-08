@@ -2,7 +2,6 @@
 #1. Read a csv file with information of 
 # total energy under different pressure of each compounds.
 #2. Plot the energy-pressure graph.
-import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -12,7 +11,6 @@ def pERead():
 
 def pEplot(plotData):
     def plotOneData(titleName,pETuple,colorPoint=None,colorLine=None):
-        #mpl.rcParams['lines.linewidth'] = 1
         if colorPoint==None:
             colorPoint='firebrick'
         if colorLine==None:
@@ -36,6 +34,10 @@ def test_pEplot():
     testData = {'UP_2':([0,5,10,15,20],[0,-6,-7,-8,-4]),'UAs_2':([0,5,10,15,20],[0,-2,-7,-8,-4])}
     pEplot(testData)
 
+def test_pERead():
+    testfilepath='energyLowpress_test'
+    outdata = pERead(testfilepath)
+    return outdata
 
 if __name__ == '__main__':    
     #pEplot(pERead())
