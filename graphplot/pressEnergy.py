@@ -1,14 +1,19 @@
+#==================================================================#
 # This code has two parts, 
 #1. Read a csv file with information of 
 # total energy under different pressure of each compounds.
 #2. Plot the energy-pressure graph.
+#==================================================================#
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import os
-
-# Define a dataStructure----a Tree that Compounds--structure--picture, this will be changed to a json file format in future.
-# And not only for pressure-energy plot, a dataStructure for pressure-band plot will be difined.
+#==================================================================#
+# Define a dataStructure----a Tree that Compounds--structure--picture,
+# this will be changed to a json file format in future.
+# And not only for pressure-energy plot, 
+#a dataStructure for pressure-band plot will be difined.
+#==================================================================#
 class compounds_data(dict):
     def __init__(self,compounds=None):
         if compounds==None:
